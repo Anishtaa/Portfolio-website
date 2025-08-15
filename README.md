@@ -1,4 +1,4 @@
-# John Doe - Portfolio
+# Personal Portfolio Website
 
 A modern, responsive portfolio website built with React, TypeScript, Tailwind CSS, and Framer Motion. Features a beautiful dark theme with purple accents, smooth animations, and dynamic content management.
 
@@ -39,7 +39,7 @@ A modern, responsive portfolio website built with React, TypeScript, Tailwind CS
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/portfolio.git
+   git clone https://github.com/Anishtaa/Portfolio-website.git
    cd portfolio
    ```
 
@@ -181,14 +181,6 @@ The portfolio includes:
 3. **Code Splitting**: React Router automatically splits code by routes
 4. **Minification**: Build process minifies CSS and JavaScript
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -200,14 +192,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Lucide React](https://lucide.dev/) for icons
 - [Unsplash](https://unsplash.com/) for sample images
 
-## 📞 Contact
-
-- **Email**: john.doe@example.com
-- **LinkedIn**: [linkedin.com/in/johndoe](https://linkedin.com/in/johndoe)
-- **GitHub**: [github.com/johndoe](https://github.com/johndoe)
 
 ---
 
-Made with ❤️ by John Doe
+Made with ❤️ by Anishta M
 
 
