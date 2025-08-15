@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 20%, #1a1a1a 40%, #2a2a2a 60%, #1a1a1a 80%, #0a0a0a 100%);
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: gradientShift 35s ease-in-out infinite;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background: transparent;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: linear-gradient(135deg, #BC8A8A 0%, #8B5CF6 50%, #A855F7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    background: rgba(30, 30, 31, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(188, 126, 222, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(188, 126, 222, 0.2);
+    border-color: rgba(188, 126, 222, 0.3);
+  }
+  
+  .button-primary {
+    @apply bg-gradient-to-r from-lavender to-ultra-violet text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-lavender/25 hover:scale-105;
+  }
+  
+  .button-secondary {
+    @apply bg-transparent border-2 border-lavender text-lavender px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-lavender hover:text-white hover:shadow-lg hover:shadow-lavender/25 hover:scale-105;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section transition animations */
+  .section-transition {
+    position: relative;
+  }
+
+  /* Removed old line divider styling - replaced with animated SVG dividers */
+  
+  /* Section divider utilities */
+  .section-divider-container {
+    position: relative;
+    z-index: 10;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+  
+  .section-divider-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.1) 20%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(0, 0, 0, 0.1) 80%,
+      transparent 100%
+    );
+    pointer-events: none;
+  }
+  
+  .section-divider-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(188, 126, 222, 0.1) 0%,
+      transparent 70%
+    );
+    filter: blur(20px);
+    pointer-events: none;
+  }
+  
+  /* Section connector utilities */
+  .section-connector-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+  }
+  
+  .section-connector-path {
+    vector-effect: non-scaling-stroke;
+  }
+  
+  .section-connector-glow {
+    filter: url(#connectorGlow);
+  }
+  
+  .section-connector-dots {
+    stroke-dasharray: 8,6;
+    animation: connectorFlow 20s linear infinite;
+  }
+  
+  @keyframes connectorFlow {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -14;
+    }
+  }
+  
+  .section-connector-particles {
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  /* Continuous connector utilities */
+  .continuous-connector-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .continuous-connector-path {
+    vector-effect: non-scaling-stroke;
+  }
+  
+  .continuous-connector-glow {
+    filter: url(#continuousConnectorGlow);
+  }
+  
+  .continuous-connector-flow {
+    stroke-dasharray: 10,8;
+    animation: continuousFlow 25s linear infinite;
+  }
+  
+  @keyframes continuousFlow {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: -18;
+    }
+  }
+  
+  .continuous-connector-particles {
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  /* Enhanced scroll behavior for smooth connector animation */
+  .smooth-scroll-container {
+    scroll-behavior: smooth;
+    position: relative;
+  }
+  
+  /* Ensure sections have proper positioning for connector */
+  .section-transition {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .smooth-scroll-container {
+    scroll-behavior: smooth;
+  }
+  
+  .section-snap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 30, 31, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #BC8A8A, #8B5CF6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #8B5CF6, #A855F7);
+}

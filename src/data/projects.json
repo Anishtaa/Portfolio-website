@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Loan Approval Analysis Dashboard",
+      "description": "This Power BI dashboard analyzes loan application data to identify trends in approvals and rejections. It examines applicant demographics, loan grades, loan intent, credit history, income levels, and home-ownership types to provide insights for credit risk assessment.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "techStack": ["Power BI", "SQL", "Python", "Data Analytics", "Data Visualization"],
+      "category": "Data Analytics",
+      "githubLink": "https://github.com/Anishtaa/Loan-Approval-Analysis",
+      "liveLink": "https://github.com/Anishtaa/Loan-Approval-Analysis/blob/main/reports/screenshot/Loan%20Approval%20Analysis%20Dashboard.pdf",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Sentiment Analysis on Movie Reviews",
+      "description": "This project performs sentiment analysis on movie reviews using NLTK's built-in dataset and a Naive Bayes classifier.",
+      "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
+      "techStack": ["Python", "NLTK", "Naive Bayes", "Data Analytics", "Data Visualization"],
+      "category": "AI/ML",
+      "githubLink": "https://github.com/Anishtaa/Sentiment-Analysis-on-Movie-Reviews",
+      "liveLink": "",
+      "featured": true
+    }
+  ],
+  "categories": [
+    "Web Application",
+    "Mobile App",
+    "Data Analytics",
+    "Data Visualization",
+    "Business Solution",
+    "AI/ML"
+  ]
+}
+
+
